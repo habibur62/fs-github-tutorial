@@ -1,24 +1,36 @@
 <!DOCTYPE html>
 <html>
     <head>
+        <link rel="stylesheet" href="index.js">
+        <script>
+            
+        </script>
+        
+        <script src="date_object.js"></script>
 
     </head>
     <body>
-        <h1>welcome to vs code</h1>
-               <p>hi paragrap</p>
-        <h2>i h a</h2>
-        <div id="div1">
+        
+        <p id="demo"></p>
 
-       
-        <p>Lorem ipsum dolor sit amet con
-            sectetur adipisicing elit. Odio 
-            beatae aliquid dolorem similique 
-            inventore dolor unde atque commodi exp
-            edita explicabo, earum eos nobis! 
-            Laboriosam magni asperiores officiis
-             cupiditate in vel.
+       <script ">
+            let text="";
+           
+            function myNumbers(){
+                let n = 0;
+                return {
+                    next: function(){
+                        n+=10;
+                        return { value:n, done:false};
+                    }
+                };
+            }
+            const n = myNumbers();
 
-        </p>
-    </div> 
+            n.next();
+            n.next();
+
+            document.getElementById("demo").innerHTML= n.next().value;
+        </script>
     </body>
 </html>
